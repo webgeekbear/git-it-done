@@ -31,9 +31,7 @@ var getUserRepos = function (user) {
         .then(function (response) {
             // request was successful
             if (response.ok) {
-                console.log(response);
                 response.json().then(function (data) {
-                    console.log(data);
                     displayRepos(data, user);
                 });
             } else {
